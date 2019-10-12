@@ -16,7 +16,7 @@ const FloatingLabelTextareaContainer = styled.div`
 `;
 
 const FloatingLabel = styled.label`
-  padding: 0;
+  padding: 0.5em;
   margin: 0;
   border: 0;
   position: absolute;
@@ -33,11 +33,14 @@ const FloatingLabel = styled.label`
 `;
 
 const FloatingTextarea = styled.textarea`
-  margin:0;
-  border: none;
+  margin: 0;
+  margin-top: 6px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border: 2px solid #EEE;
   outline: none;
   font-size: 1em;
-  padding:1.25em;
+  padding: 1.25em;
   &::placeholder {
     color: #9b9b9b;
     opacity: ${props => (props.active ? 1 : 0)};
