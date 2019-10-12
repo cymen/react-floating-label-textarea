@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const FloatingLabelInput = styled.div`
+const FloatingLabelTextarea = styled.div`
   width: 100%;
 `;
 
-const FloatingLabelInputContainer = styled.div`
+const FloatingLabelTextareaContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -32,18 +32,6 @@ const FloatingLabel = styled.label`
     props.active ? 'translate3d(0, -70%, 0) scale(0.70)' : 'none'};
 `;
 
-const FloatingInput = styled.input`
-  padding: 0;
-  margin: 0;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  &::placeholder {
-    color: #9b9b9b;
-    opacity: ${props => (props.active ? 1 : 0)};
-    transition: opacity 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
-  }
-`;
 const FloatingTextarea = styled.textarea`
   margin:0;
   border: none;
@@ -56,11 +44,9 @@ const FloatingTextarea = styled.textarea`
     transition: opacity 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 
   }
-
-
 `;
 
-export default class TextInput extends React.PureComponent {
+export default class TextTextarea extends React.PureComponent {
   constructor(props) {
     super(props);
     if (!props.id && !props.name) {
@@ -92,45 +78,26 @@ export default class TextInput extends React.PureComponent {
   render() {
     const { id, label, onBlur, onFocus, type, refs, className,textarea, ...otherProps }= this.props;
     const { active } = this.state;
-    let input;
-
-    if (textarea) {
-    input =   <FloatingTextarea
-                       active={active}
-                       className={className}
-                       id={id}
-                       onBlur={this.onBlur}
-                       onFocus={this.onFocus}
-                       ref={refs}
-                       type={type}
-                       {...otherProps}
-
-                     />
-    }
-    else {
-    input =   <FloatingInput
-                      active={active}
-                      className={className}
-                      id={id}
-                      onBlur={this.onBlur}
-                      onFocus={this.onFocus}
-                      ref={refs}
-                      type={type}
-                      {...otherProps}
-
-                    />
-    }
-
 
     return (
-      <FloatingLabelInput>
-        <FloatingLabelInputContainer className={className}>
+      <FloatingLabelTextarea>
+        <FloatingLabelTextareaContainer className={className}>
           <FloatingLabel className={className} htmlFor={id} active={active}>
             {label}
           </FloatingLabel>
-        {input}
-        </FloatingLabelInputContainer>
-      </FloatingLabelInput>
+          <FloatingTextarea
+            active={active}
+            className={className}
+            id={id}
+            onBlur={this.onBlur}
+            onFocus={this.onFocus}
+            ref={refs}
+            type={type}
+            {...otherProps}
+
+          />
+        </FloatingLabelTextareaContainer>
+      </FloatingLabelTextarea>
     );
   }
 }
