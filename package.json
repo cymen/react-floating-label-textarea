@@ -1,44 +1,23 @@
 {
-  "name": "react-floating-label-input",
-  "description": "A floating label input component for React",
-  "keywords": "floating label input field material ui",
+  "name": "react-floating-label-textarea",
+  "description": "A floating label textarea component for React",
+  "keywords": "floating label textarea field material ui",
   "version": "4.2.1",
-  "main": "dist/react-floating-label-input.cjs.js",
-  "module": "dist/react-floating-label-input.esm.js",
-  "browser": "dist/react-floating-label-input.umd.js",
-  "style": "dist/react-floating-label-input.css",
+  "main": "dist/react-floating-label-textarea.cjs.js",
+  "module": "dist/react-floating-label-textarea.esm.js",
+  "browser": "dist/react-floating-label-textarea.umd.js",
+  "style": "dist/react-floating-label-textarea.css",
   "author": "Cymen Vig <cymenvig@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cymen/react-floating-label-input.git"
+    "url": "git+https://github.com/cymen/react-floating-label-textarea.git"
   },
   "prettier": {
     "printWidth": 120,
     "tabWidth": 2,
     "singleQuote": true,
     "trailingComma": "es5"
-  },
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/test/.enzyme.js",
-    "transform": {
-      ".*": "<rootDir>/node_modules/jest-css-modules"
-    },
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js}",
-      "!src/**/*.stories.{js}"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "statements": 55,
-        "branches": 45,
-        "functions": 50,
-        "lines": 60
-      }
-    }
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
