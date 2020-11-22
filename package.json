@@ -2,7 +2,7 @@
   "name": "react-floating-label-textarea",
   "description": "A floating label textarea component for React",
   "keywords": "floating label textarea field material ui",
-  "version": "4.2.1",
+  "version": "0.0.1",
   "main": "dist/react-floating-label-textarea.cjs.js",
   "module": "dist/react-floating-label-textarea.esm.js",
   "browser": "dist/react-floating-label-textarea.umd.js",
